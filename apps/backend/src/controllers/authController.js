@@ -101,6 +101,8 @@ const authController = {
         };
       }
 
+      const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:3000';
+
       // If user wants to Sign Up
       if (action === 'signup') {
         const queryParams = new URLSearchParams({
@@ -110,7 +112,7 @@ const authController = {
           googleId: googleUser.googleId,
           role
         });
-        const onboardingRedirectUrl = `http://localhost:3000/onboarding?${queryParams.toString()}`;
+        const onboardingRedirectUrl = `${frontendUrl}/onboarding?${queryParams.toString()}`;
         console.log(`➡️  OAuth callback: Sign Up flow. Redirecting to onboarding: ${onboardingRedirectUrl}`);
         return res.redirect(onboardingRedirectUrl);
       }
@@ -119,19 +121,19 @@ const authController = {
       const user = await userService.getUserByGoogleId(googleUser.googleId);
       if (!user) {
         console.log(`❌ Sign In failed: No account registered for Google ID ${googleUser.googleId}`);
-        return res.redirect(`http://localhost:3000/login?role=${role}&error=account_not_found`);
+        return res.redirect(`${frontendUrl}/login?role=${role}&error=account_not_found`);
       }
 
       const token = generateToken(user);
       const cookieOptions = {
         httpOnly: true,
         secure: env.NODE_ENV === 'production',
-        sameSite: 'lax',
+        sameSite: env.NODE_ENV === 'production' ? 'none' : 'lax',
         maxAge: env.JWT_EXPIRY * 1000 // In milliseconds
       };
 
       res.cookie('token', token, cookieOptions);
-      res.redirect('http://localhost:3000/dashboard');
+      res.redirect(`${frontendUrl}/dashboard`);
     } catch (error) {
       next(error);
     }
@@ -155,7 +157,7 @@ const authController = {
       const cookieOptions = {
         httpOnly: true,
         secure: env.NODE_ENV === 'production',
-        sameSite: 'lax',
+        sameSite: env.NODE_ENV === 'production' ? 'none' : 'lax',
         maxAge: env.JWT_EXPIRY * 1000
       };
 
@@ -210,7 +212,7 @@ const authController = {
       res.cookie('token', token, {
         httpOnly: true,
         secure: env.NODE_ENV === 'production',
-        sameSite: 'lax',
+        sameSite: env.NODE_ENV === 'production' ? 'none' : 'lax',
         maxAge: env.JWT_EXPIRY * 1000
       });
 
