@@ -21,7 +21,7 @@ const poolConfig = {
 
 // Check for ca.pem file to connect securely to Aiven/remote MySQL
 const caPath = path.join(__dirname, '../../ca.pem');
-if (fs.existsSync(caPath)) {
+if (fs.existsSync(caPath) && env.DB_HOST && env.DB_HOST.includes('aivencloud.com')) {
   poolConfig.ssl = {
     ca: fs.readFileSync(caPath),
     rejectUnauthorized: true
