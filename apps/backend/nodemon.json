@@ -1,0 +1,5 @@
+{
+  "ignore": [
+    "src/repositories/mock_db_data.json"
+  ]
+}
