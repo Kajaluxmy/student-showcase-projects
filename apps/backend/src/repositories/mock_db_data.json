@@ -1,0 +1,249 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "google_id": "mock_std",
+      "username": null,
+      "password_hash": null,
+      "email": "student@university.edu",
+      "name": "Alex Student",
+      "role": "student",
+      "profile_picture_url": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6",
+      "student_id": "ST-2026-01",
+      "recruiter_id": null,
+      "status": "active",
+      "submission_disabled": false,
+      "created_at": "2026-06-29T19:25:11.074Z"
+    },
+    {
+      "id": 2,
+      "google_id": "mock_rec",
+      "username": null,
+      "password_hash": null,
+      "email": "recruiter@techcorp.com",
+      "name": "Rachel Recruiter",
+      "role": "recruiter",
+      "profile_picture_url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+      "student_id": null,
+      "recruiter_id": "RC-TECH-10",
+      "status": "active",
+      "submission_disabled": false,
+      "created_at": "2026-06-29T19:25:11.074Z"
+    },
+    {
+      "id": 3,
+      "google_id": "mock_adm",
+      "username": "admin",
+      "password_hash": "$2a$10$ehkALJMmB/oP9Mai3LZqbe73EQD5VAXMnsCWQfv27aW4RRxDyFI4y",
+      "email": "admin@university.edu",
+      "name": "Arthur Admin",
+      "role": "admin",
+      "profile_picture_url": "https://res.cloudinary.com/dwrf0zfsl/image/upload/v1782767597/student_showcase_avatars/ylcd1njvd0efobx84usd.jpg",
+      "student_id": null,
+      "recruiter_id": null,
+      "status": "active",
+      "submission_disabled": false,
+      "created_at": "2026-06-29T19:25:11.074Z",
+      "updated_at": "2026-06-29T21:13:17.692Z"
+    },
+    {
+      "id": 4,
+      "google_id": "103432889322231788385",
+      "email": "skrishnapiriyan@gmail.com",
+      "name": "Krishnapiriyan",
+      "profile_picture_url": "https://res.cloudinary.com/dwrf0zfsl/image/upload/v1782765722/student_showcase_avatars/gnq6t5f44cbaad9orwje.jpg",
+      "role": "student",
+      "student_id": "SE/2022/048",
+      "recruiter_id": null,
+      "created_at": "2026-06-29T20:33:54.066Z",
+      "updated_at": "2026-06-29T20:42:03.362Z"
+    },
+    {
+      "id": 5,
+      "google_id": "103223859994470592879",
+      "email": "krishnapiriyan2003@gmail.com",
+      "name": "Sriharan Krishnapiriyan",
+      "profile_picture_url": "https://res.cloudinary.com/dwrf0zfsl/image/upload/v1782765827/student_showcase_avatars/bzjlfouqerpnbnzakxir.jpg",
+      "role": "recruiter",
+      "student_id": null,
+      "recruiter_id": "Recruiter-01",
+      "created_at": "2026-06-29T20:42:56.489Z",
+      "updated_at": "2026-06-29T20:43:47.570Z"
+    }
+  ],
+  "projects": [
+    {
+      "id": 101,
+      "student_id": 1,
+      "title": "Distributed Capstone Microservices",
+      "description": "A cloud-native capsone project deploying Kubernetes, Docker, and MySQL pools. Exposes REST APIs, JWT route guards, and scales horizontally with minimal resource footprints.",
+      "technology_stack": [
+        "Docker",
+        "Kubernetes",
+        "MySQL",
+        "Node.js"
+      ],
+      "thumbnail_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
+      "github_url": "https://github.com/alex-dev/microservices",
+      "deleted_at": null,
+      "status": "approved",
+      "rejection_reason": null,
+      "created_at": "2026-06-29T18:25:11.074Z"
+    },
+    {
+      "id": 102,
+      "student_id": 1,
+      "title": "E-commerce React Dashboard",
+      "description": "Stunning administration panel with glassmorphism layout, dynamic sales analytics (using charts), client-side schema validations, and role-aware navigation.",
+      "technology_stack": [
+        "React",
+        "Vite",
+        "Tailwind",
+        "Context API"
+      ],
+      "thumbnail_url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      "github_url": "https://github.com/alex-dev/dashboard",
+      "deleted_at": null,
+      "status": "approved",
+      "rejection_reason": null,
+      "created_at": "2026-06-29T17:25:11.074Z"
+    },
+    {
+      "id": 103,
+      "student_id": 4,
+      "title": "Student Project Showcase Portal",
+      "description": "The Student Project Showcase Portal is a full-stack web application designed to provide a centralized platform where university students can showcase their academic and personal software projects while allowing recruiters to discover talented students and connect with them.\r\n\r\nThe application uses Google OAuth authentication for secure and seamless login. Students can create, edit, delete, and manage their project portfolios, including uploading project thumbnails, descriptions, technologies used, GitHub repository links, live demo links, and project categories. Recruiters can browse projects using advanced search and filtering, like projects, follow student profiles, and view complete project details.\r\n\r\nThe system follows a modern three-tier architecture consisting of a React frontend, a Node.js and Express backend REST API, and a MySQL relational database. Authentication is implemented using Google OAuth and JWT-based session management. Images are stored securely, and RESTful APIs handle communication between the frontend and backend.",
+      "technology_stack": [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MySQL",
+        "Tailwind CSS"
+      ],
+      "thumbnail_url": "https://res.cloudinary.com/dwrf0zfsl/image/upload/v1782765693/student_showcase_projects/bdhnhh46uks6ujho0z7b.jpg",
+      "github_url": "https://github.com/your-username/student-project-showcase-portal",
+      "deleted_at": null,
+      "status": "approved",
+      "rejection_reason": null,
+      "created_at": "2026-06-29T20:37:08.045Z",
+      "updated_at": "2026-06-29T20:44:57.481Z"
+    }
+  ],
+  "likes": [
+    {
+      "user_id": 5,
+      "project_id": 103,
+      "created_at": "2026-06-29T21:14:09.722Z"
+    }
+  ],
+  "followers": [
+    {
+      "follower_id": 5,
+      "following_id": 4,
+      "created_at": "2026-06-29T21:14:05.873Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "recipient_id": 3,
+      "sender_id": 4,
+      "type": "student_registered",
+      "entity_id": 4,
+      "message": "A new student account has been created: Krishnapiriyan.",
+      "is_read": true,
+      "created_at": "2026-06-29T20:33:54.080Z",
+      "updated_at": "2026-06-29T20:33:54.080Z"
+    },
+    {
+      "id": 2,
+      "recipient_id": 3,
+      "sender_id": 4,
+      "type": "project_submission",
+      "entity_id": 103,
+      "message": "Krishnapiriyan published a new project \"Student Project Showcase Portal\" for review.",
+      "is_read": true,
+      "created_at": "2026-06-29T20:37:08.048Z",
+      "updated_at": "2026-06-29T20:37:08.048Z"
+    },
+    {
+      "id": 3,
+      "recipient_id": 3,
+      "sender_id": 5,
+      "type": "recruiter_registered",
+      "entity_id": 5,
+      "message": "A new recruiter account has been created: Sriharan Krishnapiriyan.",
+      "is_read": true,
+      "created_at": "2026-06-29T20:42:56.494Z",
+      "updated_at": "2026-06-29T20:42:56.494Z"
+    },
+    {
+      "id": 4,
+      "recipient_id": 4,
+      "sender_id": 3,
+      "type": "system",
+      "entity_id": 103,
+      "message": "Your project \"Student Project Showcase Portal\" has been approved and published.",
+      "is_read": true,
+      "created_at": "2026-06-29T20:44:57.487Z",
+      "updated_at": "2026-06-29T20:44:57.487Z"
+    },
+    {
+      "id": 5,
+      "recipient_id": 4,
+      "sender_id": 5,
+      "type": "project_liked",
+      "entity_id": 103,
+      "message": "Sriharan Krishnapiriyan liked your project \"Student Project Showcase Portal\"",
+      "is_read": true,
+      "created_at": "2026-06-29T20:50:15.561Z",
+      "updated_at": "2026-06-29T20:50:15.561Z"
+    },
+    {
+      "id": 6,
+      "recipient_id": 4,
+      "sender_id": 5,
+      "type": "student_followed",
+      "entity_id": 5,
+      "message": "Sriharan Krishnapiriyan started following you",
+      "is_read": true,
+      "created_at": "2026-06-29T20:50:17.752Z",
+      "updated_at": "2026-06-29T20:50:17.752Z"
+    },
+    {
+      "id": 7,
+      "recipient_id": 4,
+      "sender_id": 5,
+      "type": "student_followed",
+      "entity_id": 5,
+      "message": "Sriharan Krishnapiriyan started following you",
+      "is_read": true,
+      "created_at": "2026-06-29T21:14:05.883Z",
+      "updated_at": "2026-06-29T21:14:05.883Z"
+    },
+    {
+      "id": 8,
+      "recipient_id": 4,
+      "sender_id": 5,
+      "type": "project_liked",
+      "entity_id": 103,
+      "message": "Sriharan Krishnapiriyan liked your project \"Student Project Showcase Portal\"",
+      "is_read": true,
+      "created_at": "2026-06-29T21:14:09.726Z",
+      "updated_at": "2026-06-29T21:14:09.726Z"
+    }
+  ],
+  "audit_logs": [
+    {
+      "id": 1,
+      "admin_id": 3,
+      "action": "APPROVE_PROJECT",
+      "target_type": "project",
+      "target_id": 103,
+      "reason": "Project status set to: approved",
+      "ip_address": "::1",
+      "created_at": "2026-06-29T20:44:57.485Z",
+      "admin_name": "Arthur Admin"
+    }
+  ]
+}
