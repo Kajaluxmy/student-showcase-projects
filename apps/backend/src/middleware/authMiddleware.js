@@ -62,7 +62,8 @@ async function authMiddleware(req, res, next) {
     }
 
     // 4. Fallback for bypass mode (mock logins)
-    if (env.BYPASS_OAUTH) {
+    // Prevent auto-logging in during boot session checks (/me) so the Landing/Login pages can open.
+    if (env.BYPASS_OAUTH && req.path !== '/me') {
       const mockRole = req.headers['x-mock-role'] || req.query.mockRole || 'student';
       console.log(`⚠️  [Bypass Auth] Authenticating with mock user role: ${mockRole}`);
       
