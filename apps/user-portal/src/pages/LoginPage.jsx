@@ -28,7 +28,8 @@ export function LoginPage() {
   }
 
   const handleGoogleAuth = (action) => {
-    window.location.href = `http://localhost:5000/api/auth/google?action=${action}&role=${role}`;
+    const apiHost = import.meta.env.VITE_API_HOST || 'http://localhost:5000';
+    window.location.href = `${apiHost}/api/auth/google?action=${action}&role=${role}`;
   };
 
   return (

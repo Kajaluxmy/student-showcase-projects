@@ -4,7 +4,8 @@ import { ArrowLeft, UserPlus, Info } from 'lucide-react';
 
 export function RegisterPage() {
   const handleGoogleLogin = () => {
-    window.location.href = 'http://localhost:5000/api/auth/google';
+    const apiHost = import.meta.env.VITE_API_HOST || 'http://localhost:5000';
+    window.location.href = `${apiHost}/api/auth/google`;
   };
 
   return (
