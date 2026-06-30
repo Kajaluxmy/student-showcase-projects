@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:5000/api';
+const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 export async function apiClient(endpoint, options = {}) {
   const url = `${BASE_URL}${endpoint}`;
@@ -48,7 +48,8 @@ export async function apiClient(endpoint, options = {}) {
 export const getImageUrl = (url) => {
   if (!url) return 'https://images.unsplash.com/photo-1555066931-4365d14bab8c';
   if (url.startsWith('/')) {
-    return `http://localhost:5000${url}`;
+    const apiHost = import.meta.env.VITE_API_HOST || 'http://localhost:5000';
+    return `${apiHost}${url}`;
   }
   return url;
 };
