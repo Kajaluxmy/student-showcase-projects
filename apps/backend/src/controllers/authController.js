@@ -280,7 +280,7 @@ const authController = {
       const cookieOptions = {
         httpOnly: true,
         secure: env.NODE_ENV === 'production',
-        sameSite: 'lax',
+        sameSite: env.NODE_ENV === 'production' ? 'none' : 'lax',
         maxAge: env.JWT_EXPIRY * 1000
       };
 
